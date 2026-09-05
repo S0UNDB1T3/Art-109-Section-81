@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richard's Image Optimization Tutorial</title>
+</head>
+
+<body>
+  <header>
+    <h1>Richard's Image Optimization Tutorial</h1>
+
+    <p>
+      HELLO!! For this tutorial I am showing one of my digital art pieces using
+      different image sizes. This lets the browser choose the image that works
+      best for the screen it is being viewed on.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>My Digital Artwork</h2>
+
+      <figure>
+        <img
+          src="images/richard-art-fallback.jpg"
+          alt="A red and black digital illustration of Shadow the Hedgehog with the words I Am All of Me"
+          srcset="images/richard-art-640.jpg 640w,
+                  images/richard-art-1280.jpg 1280w,
+                  images/richard-art-1920.jpg 1920w"
+        >
+
+        <figcaption>
+          I Am All of Me. This image uses srcset so the browser can load an
+          optimized version depending on the viewer's screen size.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Programs I Use</h2>
+
+      <p>
+        Some of the programs that I regularly use are Blender, Substance Painter,
+        After Effects, and p5.js; along with Clip Studio Paint and other Adobe products!
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../../index.html">Go back to the main index</a></p>
+
+    <p>
+      <a
+        href="https://s0undb1t3.github.io/Portfolio-Senior-Year/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Check out my Art DMA Portfolio
+      </a>
+    </p>
+
+    <p>Made by Richard Rojas-Rangel x3</p>
+  </footer>
+</body>
+</html>
