@@ -3,225 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//Keep the title for class purposes >:P
-  <title>Richard's Art 109 Repos. Website Assign</title>
-
-  <style>
-    body {
-      max-width: 850px;
-      background-color: white;
-      color: #222222;
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-    }
-
-    h1, h2 {
-      color: #1b63a5;
-    }
-
-    a {
-      color: #1b63a5;
-    }
-
-    nav ul {
-      padding-left: 20px;
-    }
-
-    section {
-      margin-top: 35px;
-    }
-
-    img {
-      width: 150px;
-      height: auto;
-    }
-
-    .fun-item {
-      margin: 20px 0;
-    }
-
-    .editable {
-      padding: 10px;
-      border: 1px dashed #1b63a5;
-    }
-
-    footer {
-      margin-top: 40px;
-    }
-  </style>
+  <title>Richard's Image Optimization Tutorial</title>
 </head>
 
 <body>
-  <header id="top">
-    <h1>Richard's SJSU Art 109 Website</h1>
+  <header>
+    <h1>Richard's Image Optimization Tutorial</h1>
 
     <p>
-      Hello!!! My name is Richard, and I am a Digital Media Art student here
-      at SJSU!! I am currently in my senior year.
+      HELLO!! For this tutorial I am showing one of my digital art pieces using
+      different image sizes. This lets the browser choose the image that works
+      best for the screen it is being viewed on.
     </p>
-
-    <nav aria-label="Main navigation">
-      <h2>Jump to a Section</h2>
-
-      <ul>
-        <li><a href="#about">About Me!!</a></li>
-        <li><a href="#tools">Things I Like to Make In My Free Time</a></li>
-        <li><a href="#fun">Fun HTML Stuff (PROJECT TUTORIAL STUFF) </a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main id="main-content">
-    <section id="about">
-      <h2>About Me</h2>
-
-      <p>
-        Hello!! My name is Richard Rojas and I am a DMA artist who mainly works with 3D art programs, animation, graphic design, and interactive
-        media!! I like mixing technology with art because it lets me experiment
-        with a bunch of different ideas and styles while combining who I am.
-      </p>
+  <main>
+    <section>
+      <h2>My Digital Artwork</h2>
 
       <figure>
         <img
-          src="images/XTauntIIAnimated.webp"
-          alt="A simple blue Hedgehog Animation displaying digital artwork"
+          src="images/richard-art-fallback.jpg"
+          alt="A digital art and animation project created by Richard"
+          srcset="images/richard-art-640.jpg 640w,
+                  images/richard-art-1280.jpg 1280w,
+                  images/richard-art-1920.jpg 1920w"
         >
 
         <figcaption>
-          This .WEBP image uses the relative path XTauntIIAnimated.webp
+          This image uses srcset so the browser can load an optimized version
+          depending on the viewer's screen size.
         </figcaption>
       </figure>
     </section>
-    
-//things i like section -
-    
-    <section id="tools">
-      <h2>Things I Like to Make (art wise)</h2>
 
-      <ul>
-        <li>3D models</li>
-        <li>Animations (2D/3D)</li>
-        <li>Graphic designs</li>
-        <li>SFX and interactive art</li>
-      </ul>
+    <section>
+      <h2>Programs I Use</h2>
 
       <p>
-        You can also check out my
-        <a
-          href="https://s0undb1t3.github.io/Portfolio-Senior-Year/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Art DMA Portfolio
-        </a>
-        to see where I am putting my class work and personal work.
+        Some of the programs that I regularly use are Blender, Substance Painter,
+        After Effects, and p5.js; along with Clip Studio Paint and other Adobe products!
       </p>
-    </section>
-
-    <section id="fun">
-      <h2>Fun HTML Stuff!!!</h2>
-
-      <p>
-        Here are some random fun things HTML can do without needing JavaScript (all the tutorial stuff).
-      </p>
-
-      <div class="fun-item">
-        <label for="color-choice">
-          Pick a color because why not:
-        </label>
-
-        <input
-          type="color"
-          id="color-choice"
-          name="color-choice"
-          value="#1b63a5"
-        >
-      </div>
-
-      <div class="fun-item">
-        <p>How far I am into my current animation:</p>
-
-        <progress value="72" max="100">
-          72%
-        </progress>
-
-        <p>My current Blender energy:</p>
-
-        <meter min="0" max="10" value="8">
-          8 out of 10
-        </meter>
-      </div>
-
-      <div class="fun-item">
-        <details>
-          <summary>
-            Click this for a very important fun fact
-          </summary>
-
-          <p>
-            I have probably spent more time fixing Blender problems than
-            actually animating :P
-          </p>
-        </details>
-      </div>
-// the clickable box stuff lmao
-      
-      <div class="fun-item">
-        <p class="editable" contenteditable="true">
-          Click on this sentence and type whatever you want x3
-        </p>
-      </div>
-
-      <svg
-        width="160"
-        height="90"
-        viewBox="0 0 160 90"
-        role="img"
-        aria-label="A blue robot face made with SVG shapes"
-      >
-        <rect
-          x="10"
-          y="10"
-          width="140"
-          height="70"
-          rx="18"
-          fill="#dceeff"
-          stroke="#1b63a5"
-          stroke-width="4"
-        ></rect>
-
-        <circle
-          cx="55"
-          cy="43"
-          r="9"
-          fill="#1b63a5"
-        ></circle>
-
-        <circle
-          cx="105"
-          cy="43"
-          r="9"
-          fill="#1b63a5"
-        ></circle>
-
-        <path
-          d="M55 63 Q80 76 105 63"
-          fill="none"
-          stroke="#1b63a5"
-          stroke-width="4"
-        ></path>
-      </svg>
     </section>
   </main>
 
   <footer>
     <p>
-      <a href="#top">Go back to the top!</a>
+      <a href="../01-html/index.html">
+        Go back to my first HTML page
+      </a>
     </p>
 
-    <p aria-hidden="true">★ ★ ★</p>
-//uhhhhh next time put some font gereator bold things or mabey i can put some font imports from google fonts
+    <p>
+      <a
+        href="https://s0undb1t3.github.io/Portfolio-Senior-Year/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Check out my Art DMA Portfolio
+      </a>
+    </p>
+
     <p>Made by Richard Rojas-Rangel x3</p>
   </footer>
 </body>
