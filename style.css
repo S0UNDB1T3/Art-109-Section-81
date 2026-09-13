@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding-top: 5rem;
+  background-color: #f4f8fc;
+  color: #222222;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #1b63a5;
+  border-bottom: 0.125rem solid #123f69;
+  text-align: center;
+  z-index: 10;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0.25rem 0.75rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header,
+main,
+footer {
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+header {
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0.5rem 0;
+  color: #1b63a5;
+  font-size: 3rem;
+}
+
+.intro {
+  margin: 0;
+  color: #124878;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+section {
+  margin: 1rem auto;
+  padding: 3rem 2rem;
+  scroll-margin-top: 6rem;
+}
+
+h2 {
+  margin-top: 0;
+  color: #1b63a5;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 0;
+  color: #124878;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+a {
+  color: #1b63a5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.square-image {
+  max-width: 40rem;
+}
+
+.project {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border: 0.125rem solid #bdd7ed;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(27, 99, 165, 0.18);
+}
+
+.project p {
+  max-width: 50rem;
+  margin: 1rem auto;
+}
+
+#about,
+#tools,
+#class-work {
+  background-color: white;
+  border: 0.125rem solid #d6e7f5;
+}
+
+#tools ul {
+  max-width: 20rem;
+  margin: 1rem auto;
+}
+
+#class-work {
+  text-align: center;
+}
+
+footer {
+  padding: 3rem 2rem;
+  background-color: #e3f0fb;
+  text-align: center;
+}
