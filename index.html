@@ -3,36 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="The one-page portfolio of Richard Rojas-Rangel, a digital media artist working in 3D, 2D, animation, and motion design."
+  >
   <title>Richard Rojas-Rangel | Digital Media Artist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <nav aria-label="Main navigation">
-    <a href="#top">Home</a>
-    <a href="#about">About</a>
-    <a href="#work">My Work</a>
-    <a href="#tools">Programs</a>
-    <a href="#class-work">Class Work</a>
+    <div class="nav-inner">
+      <a class="nav-name" href="#top">S0UNDB1T3</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">My Work</a>
+        <a href="#tools">Programs</a>
+        <a href="#class-work">Class Work</a>
+      </div>
+    </div>
   </nav>
 
   <header id="top">
     <p class="intro">Digital Media Artist | 3D | 2D | Motion</p>
-    <h1>Richard Rojas-Rangel</h1>
+    <h1>Richard<br>Rojas-Rangel</h1>
 
-    <p>
+    <p class="hero-copy">
       HELLO!! Welcome to my one-page portfolio. This is a collection of some of
-      my 3D renders, animation tests, and illustrations!
+      my 3D renders, animation tests &amp; illustrations!
     </p>
+
+    <a class="button" href="#work">See My Work</a>
   </header>
 
   <main>
     <section id="about">
+      <p class="section-label">01 / About</p>
       <h2>About Me</h2>
 
-      <p>
+      <p class="section-copy">
         My name is Richard Rojas-Rangel and I am a Digital Media Art student at
-        SJSU. I mainly work with 3D art, animation, graphic design & interactive
+        SJSU. I mainly work with 3D art, animation, graphic design &amp; interactive
         media!! I like combining technology with art because it lets me experiment
         with a bunch of different ideas, characters, and styles while still making
         everything feel like me.
@@ -40,113 +59,139 @@
     </section>
 
     <section id="work">
+      <p class="section-label">02 / Portfolio</p>
       <h2>Selected Work</h2>
 
-      <article class="project">
-        <h3>I Am All of Me</h3>
+      <div class="project-grid">
+        <article class="project">
+          <img
+            src="portfolio-images/shadow-all-of-me.jpg"
+            alt="A red and black digital render of Shadow the Hedgehog with the words I Am All of Me"
+          >
 
-        <img
-          src="portfolio-images/shadow-all-of-me.jpg"
-          alt="A red and black digital render of Shadow the Hedgehog with the words I Am All of Me"
-        >
+          <div class="project-info">
+            <p class="project-number">Project 01</p>
+            <h3>I Am All of Me</h3>
 
-        <p>
-          This is a Shadow the Hedgehog piece I made that focuses on dramatic
-          lighting, since it's based on the Scene from the movie where he is finally freed!! I used Clip Studio to make this artwork!
-        </p>
-      </article>
+            <p>
+              This is a Shadow the Hedgehog piece I made that focuses on dramatic
+              lighting, since it is based on the scene from the movie where he is
+              finally freed!! I used Clip Studio Paint to make this artwork.
+            </p>
+          </div>
+        </article>
 
-      <article class="project">
-        <h3>Sonic Animation Test</h3>
+        <article class="project">
+          <img
+            src="portfolio-images/0001-0120-ezgif.com-video-to-gif-converter.gif"
+            alt="A colorful 3D animation of Sonic the Hedgehog posing against a dark blue background"
+            loading="lazy"
+          >
 
-        <img
-          src="portfolio-images/0001-0120-ezgif.com-video-to-gif-converter.gif"
-          alt="A colorful 3D render of Sonic the Hedgehog posing against a dark blue background"
-        >
+          <div class="project-info">
+            <p class="project-number">Project 02</p>
+            <h3>Sonic Animation Test</h3>
 
-        <p>
-          This Sonic piece was a render and animation test where I focused on
-          posing, materials & getting his personality to come through from an original artwork from the ACTUAL series. I wanted
-          him to feel faithful but still look like he was ready to move (also making sure 2D worked in 3D.
-        </p>
-      </article>
+            <p>
+              This Sonic piece was a render and animation test where I focused on
+              posing, materials &amp; getting his personality to come through from an
+              original artwork from the actual series. I wanted him to feel faithful
+              but still look like he was ready to move (also making sure 2D worked in 3D).
+            </p>
+          </div>
+        </article>
 
-      <article class="project">
-        <h3>Felicia - Darkstalkers</h3>
+        <article class="project">
+          <img
+            src="portfolio-images/felicia-darkstalkers.jpg"
+            alt="A colorful digital illustration featuring Felicia from Darkstalkers in several poses"
+            loading="lazy"
+          >
 
-        <img
-          src="portfolio-images/felicia-darkstalkers.jpg"
-          alt="A colorful digital illustration featuring Felicia from Darkstalkers in several poses"
-        >
+          <div class="project-info">
+            <p class="project-number">Project 03</p>
+            <h3>Felicia - Darkstalkers</h3>
 
-        <p>
-          This Felicia piece combines illustration, character art & graphic design.
-          I used multiple versions of her in the composition to make it feel like
-          a loud arcade or fighting game poster that you would see in art books and releases.
-        </p>
-      </article>
+            <p>
+              This Felicia piece combines illustration, character art &amp; graphic design.
+              I used multiple versions of her in the composition to make it feel like
+              a loud arcade or fighting game poster that you would see in art books and releases.
+            </p>
+          </div>
+        </article>
 
-      <article class="project">
-        <h3>Super Sonic Render</h3>
+        <article class="project">
+          <img
+            class="square-image"
+            src="portfolio-images/super-sonic-render.jpg"
+            alt="A warm golden 3D render of Super Sonic standing against a white background"
+            loading="lazy"
+          >
 
-        <img
-          class="square-image"
-          src="portfolio-images/super-sonic-render.jpg"
-          alt="A warm golden 3D render of Super Sonic standing against a white background"
-        >
+          <div class="project-info">
+            <p class="project-number">Project 04</p>
+            <h3>Super Sonic Render</h3>
 
-        <p>
-          This Super Sonic render was mainly a lighting and material experiment.
-          I wanted his fur and glow to feel warm and powerful while keeping the
-          background simple so the character stands out.
-        </p>
-      </article>
+            <p>
+              This Super Sonic render was mainly a lighting and material experiment.
+              I wanted his fur and glow to feel warm and powerful while keeping the
+              background simple so the character stands out.
+            </p>
+          </div>
+        </article>
+      </div>
     </section>
-//update with more tools such as kritta 
+
     <section id="tools">
+      <p class="section-label">03 / Tools</p>
       <h2>Programs I Use</h2>
 
-      <ul>
+      <ul class="tool-list">
         <li>Blender</li>
         <li>Substance Painter</li>
-        <li>Adobe After Effects</li>
-        <li>Adobe Illustrator</li>
+        <li>After Effects</li>
+        <li>Illustrator</li>
         <li>Clip Studio Paint</li>
+        <li>Krita</li>
         <li>p5.js</li>
       </ul>
     </section>
-<!-- try to pull the code from the last portfolio since it also contains better heading and whatnot -->
-    
+
     <section id="class-work">
+      <p class="section-label">04 / Class</p>
       <h2>ART 109 Class Work</h2>
 
-      <p>
-        <a href="tutorials/01-html/index.html">Tutorial 1: HTML</a>
-      </p>
-
-      <p>
-        <a href="tutorials/02-html-images/index.html">
-          Tutorial 4: Image Optimization
+      <div class="class-links">
+        <a href="tutorials/01-html/index.html">
+          <span>Tutorial 1</span>
+          HTML Basics
         </a>
-      </p>
+
+        <a href="tutorials/02-html-images/index.html">
+          <span>Tutorial 4</span>
+          Image Optimization
+        </a>
+      </div>
     </section>
   </main>
 
   <footer>
+    <p class="section-label">Keep Looking</p>
     <h2>More of My Work</h2>
-<!-- ACTUAL portfolio link is working (also since it shtml //doesn't work I forgot about that-->
-    <p>
-      <a
-        href="https://s0undb1t3.github.io/Portfolio-Senior-Year/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Visit my full DMA portfolio
-      </a>
-    </p>
 
-    <p>Made by Richard Rojas-Rangel x3</p>
-    <p><a href="#top">Go back to the top!</a></p>
+    <a
+      class="button button-light"
+      href="https://s0undb1t3.github.io/Portfolio-Senior-Year/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Visit My Full DMA Portfolio
+    </a>
+
+    <p class="credit">Made by Richard Rojas-Rangel x3</p>
+    <p><a class="back-to-top" href="#top">Go back to the top!</a></p>
   </footer>
+</body>
+</html>
 </body>
 </html>
