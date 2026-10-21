@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="A responsive portfolio grid where every artwork links to its own project page."
+  >
+  <title>Portfolio Grid with Project Pages | Richard Rojas-Rangel</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../css/tutorial10.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="topbar">
+        <a class="brand" href="../../../index.html">@S0UNDB1T3</a>
+
+        <nav class="top-links" aria-label="Tutorial navigation">
+          <a href="../index.html">Tutorial 10 Home</a>
+          <a href="../lightbox/index.html">Lightbox Version</a>
+          <a href="../../../index.html">Main Portfolio</a>
+        </nav>
+      </div>
+
+      <p class="eyebrow">Tutorial 10 / Live Link 01</p>
+      <h1>Portfolio Project Pages</h1>
+
+      <p class="header-copy">
+        Each image in this Flexbox grid is wrapped in an anchor tag. Click an
+        artwork to open a separate page and learn more about that project.
+      </p>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <div class="section-heading">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Choose a Project</h2>
+      <p>
+        These pages include some of my 2D illustrations, 3D renders, and
+        animation work. Every card grows, shrinks, and wraps with the screen.
+      </p>
+    </div>
+
+    <p class="instruction-note">
+      <strong>Try it:</strong> click any project image or its View Project Page button.
+    </p>
+
+    <div class="flex-container-grid">
+      <article class="project-card flex-item-grid">
+        <a
+          class="project-image-link"
+          href="projects/shadow.html"
+          aria-label="Open the I Am All of Me project page"
+        >
+          <img
+            src="../../../portfolio-images/shadow-all-of-me.jpg"
+            alt="A red and black Shadow the Hedgehog artwork with the words I Am All of Me"
+          >
+        </a>
+
+        <div class="project-info">
+          <p class="project-number">Project 01</p>
+          <h2>I Am All of Me</h2>
+          <p>A dramatic Shadow illustration focused on lighting and atmosphere.</p>
+          <a class="project-link" href="projects/shadow.html">View Project Page</a>
+        </div>
+      </article>
+
+      <article class="project-card flex-item-grid">
+        <a
+          class="project-image-link"
+          href="projects/sonic-animation.html"
+          aria-label="Open the Sonic Animation Test project page"
+        >
+          <img
+            src="../../../portfolio-images/0001-0120-ezgif.com-video-to-gif-converter.gif"
+            alt="A colorful 3D animation of Sonic posing against a dark blue background"
+            loading="lazy"
+          >
+        </a>
+
+        <div class="project-info">
+          <p class="project-number">Project 02</p>
+          <h2>Sonic Animation Test</h2>
+          <p>A Blender test exploring posing, materials, and animated character energy.</p>
+          <a class="project-link" href="projects/sonic-animation.html">View Project Page</a>
+        </div>
+      </article>
+
+      <article class="project-card flex-item-grid">
+        <a
+          class="project-image-link"
+          href="projects/felicia.html"
+          aria-label="Open the Felicia Darkstalkers project page"
+        >
+          <img
+            src="../../../portfolio-images/felicia-darkstalkers.jpg"
+            alt="A colorful character illustration featuring Felicia from Darkstalkers"
+            loading="lazy"
+          >
+        </a>
+
+        <div class="project-info">
+          <p class="project-number">Project 03</p>
+          <h2>Felicia - Darkstalkers</h2>
+          <p>An illustration and graphic design piece inspired by arcade artwork.</p>
+          <a class="project-link" href="projects/felicia.html">View Project Page</a>
+        </div>
+      </article>
+
+      <article class="project-card flex-item-grid">
+        <a
+          class="project-image-link"
+          href="projects/super-sonic.html"
+          aria-label="Open the Super Sonic Render project page"
+        >
+          <img
+            src="../../../portfolio-images/super-sonic-render.jpg"
+            alt="A warm golden 3D render of Super Sonic on a white background"
+            loading="lazy"
+          >
+        </a>
+
+        <div class="project-info">
+          <p class="project-number">Project 04</p>
+          <h2>Super Sonic Render</h2>
+          <p>A 3D lighting and material study built around Super Sonic's glow.</p>
+          <a class="project-link" href="projects/super-sonic.html">View Project Page</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>
+        Tutorial 10 by Richard Rojas-Rangel -
+        <a href="../lightbox/index.html">try the lightbox version next</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

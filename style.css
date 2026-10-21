@@ -1,0 +1,728 @@
+/* The tutorial's color palette is stored as reusable custom variables. */
+:root {
+  --bg-color-1: #f3f8ff;
+  --bg-color-2: #ffffff;
+  --font: #121b2b;
+  --accent-1: #1261d8;
+  --accent-2: #66dcff;
+  --dark: #071426;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color-1);
+  color: var(--font);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--dark);
+  border-bottom: 0.25rem solid var(--accent-2);
+  z-index: 10;
+}
+
+/* Reusable Flexbox parent from the portfolio grid tutorial. */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-inner {
+  align-items: center;
+  max-width: 75rem;
+  min-height: 4.75rem;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+}
+
+nav a {
+  display: inline-block;
+  color: var(--bg-color-2);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-name {
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.1em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  padding: 0.45rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  background-color: var(--accent-1);
+  color: var(--bg-color-2);
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+header {
+  min-height: 42rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 7rem 2rem;
+}
+
+header h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", Arial, sans-serif;
+  line-height: 1.05;
+}
+
+header h1 {
+  max-width: 55rem;
+  margin: 0.75rem 0 1.5rem;
+  color: var(--dark);
+  font-size: clamp(4rem, 9vw, 7.75rem);
+  letter-spacing: -0.06em;
+  text-shadow: 0.18rem 0.18rem 0 var(--accent-2);
+}
+
+.intro,
+.section-label,
+.project-number {
+  color: var(--accent-1);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.intro {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.hero-copy {
+  max-width: 40rem;
+  margin: 0 0 2rem;
+  font-size: 1.15rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 1.4rem;
+  background-color: var(--accent-1);
+  border: 0.125rem solid var(--accent-1);
+  border-radius: 0.3rem;
+  color: var(--bg-color-2);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--dark);
+  border-color: var(--dark);
+  color: var(--accent-2);
+  transform: translateY(-0.2rem);
+}
+
+section {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+#about,
+#tools {
+  max-width: none;
+  padding-right: max(2rem, calc((100% - 71rem) / 2));
+  padding-left: max(2rem, calc((100% - 71rem) / 2));
+  background-color: var(--bg-color-2);
+}
+
+.section-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+}
+
+h2 {
+  margin: 0 0 2.5rem;
+  color: var(--dark);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -0.04em;
+}
+
+.section-copy {
+  max-width: 58rem;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.portfolio-intro {
+  max-width: 48rem;
+  margin: -1rem 0 2.5rem;
+  font-size: 1.1rem;
+}
+
+/* Flexbox portfolio grid: parent container wraps the project cards. */
+.flex-container-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* grow | shrink | basis */
+.flex-item-grid {
+  flex: 1 1 24rem;
+  min-width: 0;
+}
+
+.project {
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--bg-color-2);
+  border: 0.125rem solid var(--dark);
+  box-shadow: 0.65rem 0.65rem 0 var(--accent-2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project:hover {
+  box-shadow: 0.9rem 0.9rem 0 var(--accent-1);
+  transform: translate(-0.25rem, -0.25rem);
+}
+
+.project img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: var(--dark);
+  border-bottom: 0.125rem solid var(--dark);
+}
+
+.project .square-image {
+  object-position: center;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-number {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+}
+
+h3 {
+  margin: 0 0 1rem;
+  color: var(--dark);
+  font-size: 1.75rem;
+}
+
+.project-info > p:last-child {
+  margin-bottom: 0;
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-list li {
+  padding: 0.7rem 1rem;
+  background-color: var(--dark);
+  border: 0.125rem solid var(--dark);
+  border-radius: 100rem;
+  color: var(--bg-color-2);
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tool-list li:hover {
+  background-color: var(--accent-2);
+  color: var(--dark);
+}
+
+#motion {
+  max-width: none;
+  padding-right: max(2rem, calc((100% - 71rem) / 2));
+  padding-left: max(2rem, calc((100% - 71rem) / 2));
+  background-color: var(--dark);
+  color: var(--bg-color-2);
+}
+
+#motion .section-label {
+  color: var(--accent-2);
+}
+
+#motion h2 {
+  color: var(--bg-color-2);
+}
+
+.motion-copy {
+  max-width: 47rem;
+  margin: -1rem 0 2.5rem;
+  font-size: 1.1rem;
+}
+
+.motion-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.demo-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 29rem;
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--bg-color-2);
+  border: 0.125rem solid var(--accent-2);
+  color: var(--font);
+  text-align: center;
+}
+
+.demo-card h3 {
+  margin-bottom: 2rem;
+}
+
+.demo-card > p:last-child {
+  max-width: 31rem;
+  margin: auto auto 0;
+}
+
+.demo-type {
+  margin: 0 0 0.35rem;
+  color: var(--accent-1);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Tutorial 7, element 1: a hover and keyboard-focus transition. */
+.transition-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 13rem;
+  min-height: 8rem;
+  margin: 1rem auto 2rem;
+  padding: 1rem;
+  background-color: var(--accent-1);
+  border: 0.15rem solid var(--dark);
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0 var(--accent-2);
+  color: var(--bg-color-2);
+  cursor: pointer;
+  font: 700 1rem "Space Grotesk", Arial, sans-serif;
+  transition: width 0.6s ease, background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.transition-demo:hover,
+.transition-demo:focus-visible {
+  width: min(100%, 23rem);
+  background-color: var(--accent-2);
+  box-shadow: 0.8rem 0.8rem 0 var(--accent-1);
+  color: var(--dark);
+  transform: rotate(-2deg) scale(1.04);
+}
+
+.transition-demo:focus-visible {
+  outline: 0.2rem solid var(--dark);
+  outline-offset: 0.3rem;
+}
+
+/* Tutorial 7, element 2: one animation using the shorthand property. */
+.animation-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  margin: 1rem auto 3rem;
+  background-color: var(--accent-1);
+  border: 0.2rem solid var(--dark);
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0 var(--accent-2);
+  color: var(--bg-color-2);
+  font: 700 2rem "Space Grotesk", Arial, sans-serif;
+  animation: signal-float 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes signal-float {
+  from {
+    background-color: var(--accent-1);
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0 var(--accent-2);
+    transform: translateY(0) rotate(-6deg) scale(0.95);
+  }
+
+  to {
+    background-color: var(--dark);
+    border-radius: 50%;
+    box-shadow: 0.9rem 0.9rem 0 var(--accent-1);
+    transform: translateY(-1.25rem) rotate(12deg) scale(1.08);
+  }
+}
+
+#dom-demo {
+  max-width: none;
+  padding-right: max(2rem, calc((100% - 71rem) / 2));
+  padding-left: max(2rem, calc((100% - 71rem) / 2));
+  background-color: var(--bg-color-2);
+}
+
+.dom-copy {
+  max-width: 50rem;
+  margin: -1rem 0 2.5rem;
+  font-size: 1.1rem;
+}
+
+.dom-copy code,
+.demo-card code {
+  padding: 0.15rem 0.35rem;
+  background-color: var(--bg-color-1);
+  border-radius: 0.2rem;
+  color: var(--accent-1);
+  font-weight: 700;
+}
+
+.dom-stage {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: var(--dark);
+  border: 0.2rem solid var(--accent-1);
+  box-shadow: 0.75rem 0.75rem 0 var(--accent-2);
+  color: var(--bg-color-2);
+  text-align: center;
+}
+
+.dom-image-button {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--font);
+  border: 0.15rem solid var(--bg-color-2);
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.dom-image-button:hover,
+.dom-image-button:focus-visible {
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 0.25rem var(--accent-1);
+  transform: scale(0.985);
+}
+
+.dom-image-button:focus-visible {
+  outline: 0.2rem solid var(--bg-color-2);
+  outline-offset: 0.5rem;
+}
+
+.dom-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+}
+
+/* JavaScript adds and removes this class to swap the two images. */
+.hidden {
+  display: none;
+}
+
+#dom-status {
+  margin: 1.5rem 0 0.25rem;
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.dom-help {
+  margin: 0;
+  color: var(--bg-color-2);
+  font-size: 0.9rem;
+}
+
+.class-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.class-links a {
+  padding: 1.5rem;
+  background-color: var(--bg-color-2);
+  border: 0.125rem solid var(--dark);
+  color: var(--dark);
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.class-links a span {
+  display: block;
+  color: var(--accent-1);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.class-links a:hover,
+.class-links a:focus-visible {
+  background-color: var(--dark);
+  color: var(--bg-color-2);
+  transform: translateY(-0.2rem);
+}
+
+.class-links a:hover span,
+.class-links a:focus-visible span {
+  color: var(--accent-2);
+}
+
+footer {
+  padding: 6rem 2rem 3rem;
+  background-color: var(--dark);
+  color: var(--bg-color-2);
+  text-align: center;
+}
+
+footer h2 {
+  color: var(--bg-color-2);
+}
+
+.button-light {
+  background-color: var(--accent-2);
+  border-color: var(--accent-2);
+  color: var(--dark);
+}
+
+.button-light:hover,
+.button-light:focus-visible {
+  background-color: var(--bg-color-2);
+  border-color: var(--bg-color-2);
+  color: var(--accent-1);
+}
+
+.credit {
+  margin: 3rem 0 0.25rem;
+}
+
+.back-to-top {
+  color: var(--accent-2);
+  font-weight: 700;
+  text-underline-offset: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  color: var(--bg-color-2);
+}
+
+/* Large laptops and small desktops */
+@media (max-width: 1200px) {
+  .nav-inner,
+  header,
+  section {
+    max-width: 68rem;
+  }
+
+  header {
+    min-height: 38rem;
+  }
+}
+
+/* Tablets and small laptops */
+@media (max-width: 900px) {
+  .nav-inner {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  header {
+    min-height: 34rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .project {
+    max-width: 44rem;
+  }
+
+  .motion-demo-grid,
+  .class-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Large phones and small tablets */
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 10rem;
+  }
+
+  .nav-inner {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-name {
+    margin-bottom: 0.35rem;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    gap: 0.25rem;
+  }
+
+  .nav-links a {
+    min-height: 2.75rem;
+    padding: 0.55rem 0.65rem;
+  }
+
+  header,
+  section {
+    padding: 4rem 1.25rem;
+  }
+
+  #about,
+  #tools,
+  #motion,
+  #dom-demo {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  header {
+    min-height: 31rem;
+  }
+
+  header h1 {
+    font-size: clamp(2.8rem, 15vw, 4.25rem);
+  }
+
+  .section-copy {
+    font-size: 1.1rem;
+  }
+
+  .project {
+    box-shadow: 0.4rem 0.4rem 0 var(--accent-2);
+  }
+
+  .flex-item-grid {
+    flex-basis: 100%;
+  }
+
+  .demo-card {
+    min-height: 27rem;
+    padding: 1.5rem;
+  }
+
+  footer {
+    padding: 4rem 1.25rem 2.5rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .nav-links a {
+    padding-right: 0.45rem;
+    padding-left: 0.45rem;
+    font-size: 0.85rem;
+  }
+
+  header,
+  section {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  #about,
+  #tools,
+  #motion,
+  #dom-demo {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  .project-info {
+    padding: 1.15rem;
+  }
+
+  .tool-list {
+    gap: 0.5rem;
+  }
+
+  .tool-list li {
+    padding: 0.55rem 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
