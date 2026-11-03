@@ -1,0 +1,30 @@
+ART 109 — TUTORIAL 13 COMPLETE PACKAGE
+Richard Allen Rojas-Rangel
+
+WHAT IS INCLUDED
+- The complete ART 109 website with Tutorials 10–13 preserved.
+- Tutorial 13 page: tutorials/13-gifs-video-webcam/index.html
+- Tutorial 13 stylesheet: tutorials/13-gifs-video-webcam/style.css
+- Tutorial 13 JavaScript: tutorials/13-gifs-video-webcam/media.js
+- Optimized GIF and H.264 MP4 files in the Tutorial 13 media folder.
+- A submission PDF and browser screenshot in _tutorial-13-submission.
+
+HOW TO PUBLISH
+1. Extract this ZIP file.
+2. Open the extracted Art-109-Section-81-Tutorial-13-Complete folder.
+3. Upload the website files and folders inside it to the root of your GitHub
+   repository: https://github.com/S0UNDB1T3/Art-109-Section-81
+4. Do not upload the ZIP file itself as the website.
+5. Wait a few minutes for GitHub Pages to rebuild.
+6. Verify the Tutorial 13 page at:
+   https://s0undb1t3.github.io/Art-109-Section-81/tutorials/13-gifs-video-webcam/
+
+WHAT TO SUBMIT
+- Submit the PDF from _tutorial-13-submission in Canvas.
+- The PDF contains clickable links to the live page and GitHub repository.
+- Include the screenshot or ZIP too if your instructor requests them.
+
+WEBCAM NOTE
+- The page asks for camera permission only after Start Camera is clicked.
+- Camera access requires HTTPS on the published site.
+- The page does not record, save, or upload the camera stream.

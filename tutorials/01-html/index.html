@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Keep the title for class purposes >:P -->
+  <title>Richard's Art 109 Repos. Website Assign</title>
+</head>
+
+<body>
+  <header id="top">
+    <h1>Richard's SJSU Art 109 Website</h1>
+
+    <p>
+      Hello!!! My name is Richard, and I am a Digital Media Art student here
+      at SJSU!! I am currently in my senior year.
+    </p>
+
+    <nav aria-label="Main navigation">
+      <h2>Jump to a Section</h2>
+
+      <ul>
+        <li><a href="#about">About Me!!</a></li>
+        <li><a href="#tools">Things I Like to Make In My Free Time</a></li>
+        <li><a href="#fun">Fun HTML Stuff (PROJECT TUTORIAL STUFF)</a></li>
+        <li><a href="about.html">Go to my About Me page</a></li>
+        <li><a href="pages/programs.html">Go to my Programs page</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="about">
+      <h2>About Me</h2>
+
+      <p>
+        Hello!! My name is Richard Rojas and I am a DMA artist who mainly works
+        with 3D art programs, animation, graphic design, and interactive media!!
+        I like mixing technology with art because it lets me experiment with a
+        bunch of different ideas and styles while combining who I am.
+      </p>
+
+      <figure>
+        <img
+          src="images/XTauntIIAnimated.webp"
+          alt="A simple blue hedgehog animation displaying digital artwork"
+          width="150"
+        >
+
+        <figcaption>
+          This .WEBP image uses the relative path images/XTauntIIAnimated.webp
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Things I like section -->
+
+    <section id="tools">
+      <h2>Things I Like to Make (art wise)</h2>
+
+      <ul>
+        <li>3D models</li>
+        <li>Animations (2D/3D)</li>
+        <li>Graphic designs</li>
+        <li>SFX and interactive art</li>
+      </ul>
+
+      <p>
+        You can also check out my
+        <a
+          href="https://s0undb1t3.github.io/Portfolio-Senior-Year/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Art DMA Portfolio
+        </a>
+        to see where I am putting my class work and personal work.
+      </p>
+    </section>
+
+    <section id="fun">
+      <h2>Fun HTML Stuff!!!</h2>
+
+      <p>
+        Here are some random fun things HTML can do without needing JavaScript
+        (all the tutorial stuff).
+      </p>
+
+      <div>
+        <label for="color-choice">Pick a color because why not:</label>
+
+        <input
+          type="color"
+          id="color-choice"
+          name="color-choice"
+          value="#1b63a5"
+        >
+      </div>
+
+      <div>
+        <p>How far I am into my current animation:</p>
+
+        <progress value="72" max="100">72%</progress>
+
+        <p>My current Blender energy:</p>
+
+        <meter min="0" max="10" value="8">8 out of 10</meter>
+      </div>
+
+      <div>
+        <details>
+          <summary>Click this for a very important fun fact</summary>
+
+          <p>
+            I have probably spent more time fixing Blender problems than
+            actually animating :P
+          </p>
+        </details>
+      </div>
+
+      <!-- The clickable box stuff lmao -->
+
+      <div>
+        <p contenteditable="true">
+          Click on this sentence and type whatever you want x3
+        </p>
+      </div>
+
+      <p role="img" aria-label="A blue Sonic the Hedgehog emoji">💙🦔</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="#top">Go back to the top!</a></p>
+
+    <p aria-hidden="true">★ ★ ★</p>
+
+    <!-- Maybe I can add Google Fonts once CSS is allowed. -->
+    <p>Made by Richard Rojas-Rangel x3</p>
+  </footer>
+</body>
+</html>

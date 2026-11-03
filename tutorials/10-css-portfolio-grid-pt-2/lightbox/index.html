@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="A responsive portfolio grid that opens artwork in a BaguetteBox lightbox."
+  >
+  <title>Portfolio Grid with Lightbox | Richard Rojas-Rangel</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../css/tutorial10.css">
+  <link rel="stylesheet" href="../css/baguetteBox.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="topbar">
+        <a class="brand" href="../../../index.html">@S0UNDB1T3</a>
+
+        <nav class="top-links" aria-label="Tutorial navigation">
+          <a href="../index.html">Tutorial 10 Home</a>
+          <a href="../multi-page/index.html">Project Pages Version</a>
+          <a href="../../../index.html">Main Portfolio</a>
+        </nav>
+      </div>
+
+      <p class="eyebrow">Tutorial 10 / Live Link 02</p>
+      <h1>Portfolio Lightbox</h1>
+
+      <p class="header-copy">
+        Click an image to enlarge it with BaguetteBox. The overlay includes
+        captions and lets you move between every artwork in the grid.
+      </p>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <div class="section-heading">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Open the Gallery</h2>
+      <p>
+        This version uses locally stored BaguetteBox CSS and JavaScript files,
+        along with a custom script that runs on the Flexbox parent container.
+      </p>
+    </div>
+
+    <p class="instruction-note">
+      <strong>Try it:</strong> click any image, then use the arrows or your keyboard
+      to move through the lightbox gallery.
+    </p>
+
+    <div class="flex-container-grid">
+      <article class="project-card flex-item-grid">
+        <a
+          class="project-image-link"
+          href="../../../portfolio-images/shadow-all-of-me.jpg"
+          data-caption="I Am All of Me - Shadow illustration made with Clip Studio Paint and After Effects."
+          data-description="A dramatic Shadow the Hedgehog illustration focused on red lighting."
+        >
+          <img
+            src="../../../portfolio-images/shadow-all-of-me.jpg"
+            alt="A red and black Shadow the Hedgehog artwork with the words I Am All of Me"
+          >
+        </a>
+
+        <div class="project-info">
+          <p class="project-number">Project 01</p>
+          <h2>I Am All of Me</h2>
+          <p>Click the image to enlarge it and read its lightbox caption.</p>
+        </div>
+      </article>
+
+      <article class="project-card flex-item-grid">
+        <a
+          class="project-image-link"
+          href="../../../portfolio-images/0001-0120-ezgif.com-video-to-gif-converter.gif"
+          data-caption="Sonic Animation Test - a Blender study of posing, materials, and motion."
+          data-description="A colorful 3D animation test featuring Sonic the Hedgehog."
+        >
+          <img
+            src="../../../portfolio-images/0001-0120-ezgif.com-video-to-gif-converter.gif"
+            alt="A colorful 3D animation of Sonic posing against a dark blue background"
+            loading="lazy"
+          >
+        </a>
+
+        <div class="project-info">
+          <p class="project-number">Project 02</p>
+          <h2>Sonic Animation Test</h2>
+          <p>Click the image to enlarge it and read its lightbox caption.</p>
+        </div>
+      </article>
+
+      <article class="project-card flex-item-grid">
+        <a
+          class="project-image-link"
+          href="../../../portfolio-images/felicia-darkstalkers.jpg"
+          data-caption="Felicia - Darkstalkers - character illustration and arcade-inspired graphic design."
+          data-description="A colorful illustration featuring multiple drawings of Felicia."
+        >
+          <img
+            src="../../../portfolio-images/felicia-darkstalkers.jpg"
+            alt="A colorful character illustration featuring Felicia from Darkstalkers"
+            loading="lazy"
+          >
+        </a>
+
+        <div class="project-info">
+          <p class="project-number">Project 03</p>
+          <h2>Felicia - Darkstalkers</h2>
+          <p>Click the image to enlarge it and read its lightbox caption.</p>
+        </div>
+      </article>
+
+      <article class="project-card flex-item-grid">
+        <a
+          class="project-image-link"
+          href="../../../portfolio-images/super-sonic-render.jpg"
+          data-caption="Super Sonic Render - a Blender lighting and material study with a warm golden glow."
+          data-description="A golden 3D render of Super Sonic against a simple white background."
+        >
+          <img
+            src="../../../portfolio-images/super-sonic-render.jpg"
+            alt="A warm golden 3D render of Super Sonic on a white background"
+            loading="lazy"
+          >
+        </a>
+
+        <div class="project-info">
+          <p class="project-number">Project 04</p>
+          <h2>Super Sonic Render</h2>
+          <p>Click the image to enlarge it and read its lightbox caption.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>
+        Tutorial 10 by Richard Rojas-Rangel -
+        <a href="../multi-page/index.html">visit the project pages version</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/baguetteBox.js"></script>
+  <script>
+    baguetteBox.run(".flex-container-grid", {
+      captions: true
+    });
+  </script>
+</body>
+</html>
