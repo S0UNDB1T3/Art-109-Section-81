@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: new-world-nexus-shared-signal
+    name: sketch-together-art109
     runtime: node
     plan: free
     rootDir: tutorials/15-collaborative-drawing

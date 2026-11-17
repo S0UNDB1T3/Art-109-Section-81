@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Shared Signal Field is a collaborative Node.js and WebSocket drawing app by Richard Allen Rojas-Rangel."
+    content="Sketch Together is a collaborative Node.js and WebSocket drawing app by Richard Allen Rojas-Rangel."
   >
   <meta name="theme-color" content="#050506">
-  <title>Shared Signal Field | Collaborative Drawing</title>
+  <title>Sketch Together | Collaborative Drawing</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
@@ -19,19 +19,19 @@
   <div class="scanlines" aria-hidden="true"></div>
 
   <header class="system-bar">
-    <a class="system-mark" href="#top" aria-label="Return to the top">N26 / SHARED SIGNAL</a>
+    <a class="system-mark" href="#top" aria-label="Return to the top">SKETCH TOGETHER / STUDIO 15</a>
     <p class="connection-state">
       <span id="connection-light" class="connection-light" aria-hidden="true"></span>
       <span id="connection-label">Connecting to field</span>
     </p>
-    <p><span id="user-count">01</span> observer(s)</p>
+    <p><span id="user-count">01</span> artist(s)</p>
   </header>
 
   <main id="top">
     <section class="intro-panel" aria-labelledby="page-title">
       <div>
-        <p class="kicker">NODE.JS / SOCKET.IO / TRANSMISSION 15</p>
-        <h1 id="page-title">Shared<br><span>Signal Field</span></h1>
+        <p class="kicker">A SHARED SKETCHBOOK / ART 109</p>
+        <h1 id="page-title">Sketch<br><span>Together.</span></h1>
       </div>
 
       <div class="intro-copy">
@@ -50,7 +50,7 @@
       <div class="module-heading">
         <div>
           <p class="kicker">LIVE MULTI-USER CANVAS</p>
-          <h2 id="field-title">Send a trace into the network.</h2>
+          <h2 id="field-title">Leave a little doodle.</h2>
         </div>
 
         <dl class="field-stats">
@@ -71,12 +71,12 @@
           Your browser does not support the collaborative drawing canvas.
         </canvas>
         <div id="remote-cursors" class="remote-cursors" aria-hidden="true"></div>
-        <p class="canvas-id">FIELD / N26 / <span id="client-id">LOCAL</span></p>
+        <p class="canvas-id">SKETCHBOOK / <span id="client-id">LOCAL</span></p>
       </div>
 
       <div class="control-grid">
         <fieldset class="palette-control">
-          <legend>Signal color</legend>
+          <legend>Ink color</legend>
           <div class="swatches">
             <button class="swatch is-active" type="button" data-color="#ff4d00" aria-label="Orange"></button>
             <button class="swatch" type="button" data-color="#d8ff00" aria-label="Acid green"></button>
@@ -88,13 +88,13 @@
         </fieldset>
 
         <label class="width-control" for="brush-width">
-          <span>Signal width</span>
+          <span>Brush size</span>
           <input id="brush-width" type="range" min="1" max="24" value="5">
           <output id="width-output" for="brush-width">05 PX</output>
         </label>
 
         <div class="action-controls">
-          <button id="generate-signal" type="button">Generate signal</button>
+          <button id="generate-signal" type="button">Make a scribble</button>
           <button id="save-field" type="button">Save PNG</button>
           <button id="clear-field" class="danger-control" type="button">Clear for everyone</button>
         </div>
@@ -106,8 +106,8 @@
     </section>
 
     <section class="explanation" aria-labelledby="explanation-title">
-      <p class="kicker">HOW THE SIGNAL MOVES</p>
-      <h2 id="explanation-title">One gesture, multiple screens.</h2>
+      <p class="kicker">DRAW WITH A FRIEND</p>
+      <h2 id="explanation-title">Same page. Different places.</h2>
       <ol>
         <li><strong>01</strong><span>Your browser records normalized pointer coordinates.</span></li>
         <li><strong>02</strong><span>Socket.IO sends each line segment to the Node.js server.</span></li>
@@ -117,7 +117,7 @@
   </main>
 
   <footer>
-    <p>Shared Signal Field / Richard Allen Rojas-Rangel / ART 109 / 2026</p>
+    <p>Sketch Together / Richard Allen Rojas-Rangel / ART 109 / 2026</p>
     <p>
       AI-use disclosure: OpenAI Codex assisted with code development and testing;
       Richard directed the concept, styling, revisions, and final decisions.

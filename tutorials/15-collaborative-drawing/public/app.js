@@ -42,10 +42,10 @@
 
   function drawBackground() {
     const { width, height } = state.viewport;
-    context.fillStyle = "#050506";
+    context.fillStyle = "#fffaf1";
     context.fillRect(0, 0, width, height);
     context.lineWidth = 1;
-    context.strokeStyle = "rgba(242, 241, 236, 0.065)";
+    context.strokeStyle = "rgba(50, 48, 84, 0.08)";
 
     for (let x = 0; x <= width; x += 36) {
       context.beginPath();
@@ -61,7 +61,7 @@
       context.stroke();
     }
 
-    context.strokeStyle = "rgba(86, 232, 255, 0.22)";
+    context.strokeStyle = "rgba(50, 48, 84, 0.12)";
     context.strokeRect(18, 18, Math.max(0, width - 36), Math.max(0, height - 36));
   }
 
@@ -73,7 +73,7 @@
     context.lineCap = "round";
     context.lineJoin = "round";
     context.shadowColor = segment.color;
-    context.shadowBlur = Math.min(18, segment.width * 2);
+    context.shadowBlur = 0;
     context.beginPath();
     context.moveTo(segment.x0 * width, segment.y0 * height);
     context.lineTo(segment.x1 * width, segment.y1 * height);
@@ -207,7 +207,7 @@
 
   saveField.addEventListener("click", () => {
     const link = document.createElement("a");
-    link.download = "shared-signal-field.png";
+    link.download = "sketch-together.png";
     link.href = canvas.toDataURL("image/png");
     link.click();
     statusMessage.textContent = "Saved the current field as a PNG.";
