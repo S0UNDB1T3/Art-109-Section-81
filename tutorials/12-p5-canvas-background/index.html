@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Richard Rojas-Rangel's interactive p5.js canvas background for ART 109 Tutorial 12."
+  >
+  <title>Tutorial 12 | p5.js Signal Field</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.3.3/lib/p5.min.js" defer></script>
+  <script src="sketch.js" defer></script>
+</head>
+
+<body>
+  <!-- p5.js parents its full-window canvas to this background container. -->
+  <div id="canvas-container" aria-hidden="true"></div>
+
+  <nav class="site-nav" aria-label="Tutorial 12 navigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#top">S0UNDB1T3 / P5</a>
+
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#process">How It Works</a>
+        <a href="#submission">Links</a>
+        <a href="../../index.html">ART 109</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">ART 109 / Tutorial 12 / p5.js</p>
+      <h1>Digital<br><span>Signal Field.</span></h1>
+
+      <p class="hero-intro">
+        An interactive p5.js background built from easing, functions, for loops,
+        and sine waves. Move your cursor or finger across the screen and the
+        signal will follow you.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#experience">Explore the Sketch</a>
+        <a
+          class="button button-secondary"
+          href="https://p5js.org/reference/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >p5.js Reference</a>
+      </div>
+
+      <ul class="concept-list" aria-label="JavaScript concepts used">
+        <li>Variables</li>
+        <li>Functions</li>
+        <li>For Loops</li>
+        <li>Easing</li>
+        <li>Sine Waves</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" aria-label="Featured portfolio artwork">
+      <figure class="art-frame art-frame-main">
+        <img
+          src="../../portfolio-images/shadow-all-of-me.jpg"
+          alt="A red and black Shadow the Hedgehog illustration"
+        >
+      </figure>
+
+      <figure class="art-frame art-frame-small">
+        <img
+          src="../../portfolio-images/super-sonic-render.jpg"
+          alt="A warm golden 3D render of Super Sonic"
+        >
+      </figure>
+
+      <p class="interaction-note">
+        <span>Interactive</span>
+        Move + click
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section id="experience" class="section experience-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / Customized Background</p>
+          <h2>A Reactive Canvas Behind the Site</h2>
+        </div>
+
+        <p>
+          The canvas fills the browser window, stays behind the HTML, and does
+          not block any links. The grid bends around an eased pointer while
+          animated waves move through the background.
+        </p>
+      </div>
+
+      <div class="signal-panel">
+        <div class="signal-copy">
+          <p class="panel-label">Live input</p>
+          <h3>Move, tap, or click anywhere.</h3>
+          <p>
+            Pointer movement changes the center of the field. Clicking shifts
+            the colors and releases a pulse, while touch input provides the
+            same interaction on a phone or tablet.
+          </p>
+        </div>
+
+        <div class="signal-readout" aria-hidden="true">
+          <span class="readout-line"></span>
+          <span class="readout-line"></span>
+          <span class="readout-line"></span>
+          <p>INPUT / ACTIVE</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section process-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / JavaScript Review</p>
+          <h2>How the Sketch Works</h2>
+        </div>
+
+        <p>
+          The sketch follows the Tutorial 12 structure with a separate HTML,
+          CSS, and JavaScript file, plus the p5.js library loaded before the
+          custom sketch.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card">
+          <p class="card-number">01</p>
+          <h3>Canvas Parent</h3>
+          <p>
+            <code>canvas.parent("canvas-container")</code> places the p5 canvas
+            inside a specific HTML element.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <p class="card-number">02</p>
+          <h3>CSS Background</h3>
+          <p>
+            Fixed positioning, layering, and <code>pointer-events: none</code>
+            keep the interactive HTML usable above the canvas.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <p class="card-number">03</p>
+          <h3>Loops + Waves</h3>
+          <p>
+            Nested for loops repeat the grid while <code>sin()</code> creates
+            the moving wave lines and shifting signal pattern.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <p class="card-number">04</p>
+          <h3>Eased Input</h3>
+          <p>
+            The current position moves partway toward the pointer every frame,
+            creating a smoother chase effect on mouse and touch devices.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="submission" class="section submission-section">
+      <div>
+        <p class="eyebrow">03 / Assignment Links</p>
+        <h2>View the Code &amp; Live Site</h2>
+      </div>
+
+      <div class="submission-links">
+        <a
+          href="https://s0undb1t3.github.io/Art-109-Section-81/tutorials/12-p5-canvas-background/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Live Tutorial 12 Page</span>
+          <strong>Open Site ↗</strong>
+        </a>
+
+        <a
+          href="https://github.com/S0UNDB1T3/Art-109-Section-81"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>GitHub Repository</span>
+          <strong>View Code ↗</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Richard Rojas-Rangel / ART 109 / Tutorial 12</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <noscript>
+    <p class="noscript-message">
+      JavaScript is required to display the interactive p5.js background.
+    </p>
+  </noscript>
+</body>
+</html>

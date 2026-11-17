@@ -1,0 +1,28 @@
+ART 109 WEBSITE UPLOAD INSTRUCTIONS
+Richard Allen Rojas-Rangel
+
+This ZIP is structured for the repository root.
+
+The main portfolio homepage is:
+index.html
+
+The Net Art project is:
+projects/03-net-art/index.html
+
+After extracting the ZIP, upload ALL of its contents directly to the root of
+the Art-109-Section-81 GitHub repository. Do not upload only the Net Art folder,
+and do not place the extracted files inside another wrapper folder.
+
+Expected repository structure:
+
+index.html
+style.css
+script.js
+portfolio/
+portfolio-images/
+projects/
+tutorials/
+render.yaml
+
+The _submission folder contains PDFs and screenshots for Canvas. It does not
+affect which website page opens.
