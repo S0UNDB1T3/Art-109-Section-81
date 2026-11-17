@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Toolpath city</title>
+  <desc id="desc">A black and orange abstract machine city formed from sharp perspective shapes.</desc>
+  <defs>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#151619"/>
+      <stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+    <pattern id="micro" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#ff4d00" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="900" fill="#060607"/>
+  <rect width="1200" height="900" fill="url(#micro)"/>
+  <path d="M0 900V664L600 420l600 244v236Z" fill="url(#floor)"/>
+
+  <g stroke="#ff4d00" stroke-width="8" stroke-linejoin="miter">
+    <path d="M600 420L214 43 0 0v137l354 376Z" fill="#0d0e10"/>
+    <path d="M600 420L743 0h190L732 487Z" fill="#242529"/>
+    <path d="M600 420L1200 53v210L678 493Z" fill="#1a1b1e"/>
+    <path d="M600 420L1200 590v310H994L643 507Z" fill="#101113"/>
+    <path d="M600 420L683 900H489L548 502Z" fill="#26272a"/>
+    <path d="M600 420L290 900H55L521 482Z" fill="#17181a"/>
+  </g>
+
+  <g fill="#303136" stroke="#ff4d00" stroke-width="3">
+    <path d="M769 40l96 18-124 292-71-19z"/>
+    <path d="M884 22l134 30-227 304-94-25z"/>
+    <path d="M1032 67l104 39-281 254-77-30z"/>
+    <path d="M1070 219l130 1v82L830 391l-38-61z"/>
+    <path d="M959 338l241 25v88L814 432l16-41z"/>
+
+    <path d="M1004 613l196 78v98l-259-132z"/>
+    <path d="M878 587l219 236-70 77-199-279z"/>
+    <path d="M754 553l164 347H804L701 583z"/>
+
+    <path d="M450 570L310 900H174l233-354z"/>
+    <path d="M378 517L116 795 23 730l318-245z"/>
+    <path d="M342 434L0 579V455l327-67z"/>
+
+    <path d="M463 341L91 104l-38 85 378 204z"/>
+    <path d="M519 300L293 0h116l151 278z"/>
+  </g>
+
+  <g fill="#ff4d00">
+    <path d="M562 394h76v52h-76z"/>
+    <path d="M523 437h37v25h-37z"/>
+    <path d="M642 447h53v19h-53z"/>
+    <path d="M429 472h91v17h-91z"/>
+    <path d="M682 404h129v13H682z"/>
+  </g>
+
+  <g fill="none" stroke="#ff4d00" stroke-width="4" opacity=".8">
+    <path d="M36 70L582 411 1157 112"/>
+    <path d="M24 844L577 438 1182 732"/>
+    <path d="M302 892L592 447 879 880"/>
+  </g>
+
+  <g font-family="monospace" fill="#e8e9e6">
+    <text x="40" y="62" font-size="18" letter-spacing="5">TOOLPATH CITY / MEMORY BLOCK 02</text>
+    <text x="40" y="826" font-size="16" letter-spacing="4">G01 X072.14 Y044.90 / CUT</text>
+    <text x="878" y="844" font-size="16" letter-spacing="4">INTEGRITY 073%</text>
+  </g>
+
+  <g fill="#d8ff00">
+    <circle cx="79" cy="760" r="9"/>
+    <circle cx="105" cy="760" r="9"/>
+    <circle cx="131" cy="760" r="9"/>
+  </g>
+</svg>

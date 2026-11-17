@@ -1,0 +1,22 @@
+{
+  "name": "new-world-nexus-shared-signal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ART 109 Tutorial 15 collaborative drawing app using Node.js and Socket.IO.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node tests/socket-test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.1"
+  }
+}

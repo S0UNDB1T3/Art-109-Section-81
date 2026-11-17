@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="New World, Nexus is an interactive net artwork by Richard Allen Rojas-Rangel about machine memory, digital interfaces, and the traces people leave online."
+  >
+  <meta name="theme-color" content="#060607">
+  <title>New World, Nexus | Net Art</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to the artwork</a>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="system-bar">
+    <a class="system-mark" href="#portal" aria-label="Return to the opening transmission">
+      N26 <span>/</span> NWNX
+    </a>
+
+    <p class="system-state">
+      <span class="status-light" aria-hidden="true"></span>
+      Transmission active
+    </p>
+
+    <p class="system-clock" aria-label="Local system time">
+      <span id="clock">00:00:00</span> PST
+    </p>
+  </header>
+
+  <main id="main-content">
+    <section id="portal" class="scene hero-scene" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">NET ART TRANSMISSION / EXP. 01</p>
+        <h1 id="hero-title" class="glitch-title" data-text="NEW WORLD, NEXUS">
+          <span>New World,</span>
+          <span>Nexus</span>
+        </h1>
+
+        <p class="hero-intro">
+          A machine is trying to remember a world that never existed. Every
+          scroll, click, and dragged fragment becomes part of its reconstruction.
+        </p>
+
+        <div class="hero-actions">
+          <button id="enter-system" class="action-button" type="button">
+            Enter transmission
+          </button>
+          <p>Move slowly. The interface is watching back.</p>
+        </div>
+      </div>
+
+      <figure class="hero-figure tilt-surface" data-tilt>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="assets/nexus-core-640.webp 640w, assets/nexus-core-1200.webp 1200w"
+            sizes="(max-width: 800px) 92vw, 52vw"
+          >
+          <img
+            src="assets/nexus-core.svg"
+            alt="An abstract neon machine interface made from rings, paths, arrows, and pixel grids"
+            width="1200"
+            height="900"
+          >
+        </picture>
+        <figcaption>
+          <span>CORE_01</span>
+          <span>Pointer-linked visual field</span>
+        </figcaption>
+      </figure>
+
+      <div class="hero-index" aria-hidden="true">
+        <span>01</span>
+        <span>04</span>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>THE NETWORK REMEMBERS WHAT THE BODY FORGETS</span>
+        <span>G00 X000 Y000 / G01 X∞ Y∞</span>
+        <span>YOU ARE NOT OUTSIDE THE MACHINE</span>
+        <span>THE NETWORK REMEMBERS WHAT THE BODY FORGETS</span>
+        <span>G00 X000 Y000 / G01 X∞ Y∞</span>
+        <span>YOU ARE NOT OUTSIDE THE MACHINE</span>
+      </div>
+    </div>
+
+    <section id="memory" class="scene memory-scene reveal-scene" aria-labelledby="memory-title">
+      <div class="scene-number" aria-hidden="true">02</div>
+
+      <div class="scene-copy">
+        <p class="kicker">ARCHIVE FRAGMENT / MACHINE MEMORY</p>
+        <h2 id="memory-title">The future keeps being printed over the past.</h2>
+        <p>
+          The image behaves like a damaged magazine page recovered from a future
+          archive. Hover over it and the machine tries to correct its own memory,
+          but each correction creates another distortion.
+        </p>
+
+        <dl class="data-list">
+          <div><dt>Source</dt><dd>Unknown</dd></div>
+          <div><dt>Integrity</dt><dd id="integrity-value">73%</dd></div>
+          <div><dt>Observer</dt><dd>Present</dd></div>
+        </dl>
+      </div>
+
+      <figure class="memory-figure tilt-surface" data-tilt>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="assets/toolpath-city-640.webp 640w, assets/toolpath-city-1200.webp 1200w"
+            sizes="(max-width: 800px) 92vw, 56vw"
+          >
+          <img
+            src="assets/toolpath-city.svg"
+            alt="An abstract black and orange machine city made from angular toolpaths"
+            loading="lazy"
+            width="1200"
+            height="900"
+          >
+        </picture>
+        <div class="memory-overlay" aria-hidden="true">
+          <span>REBUILD</span>
+          <span>REBUILD</span>
+          <span>REBUILD</span>
+        </div>
+        <figcaption>Recovered image / cursor-responsive reconstruction</figcaption>
+      </figure>
+    </section>
+
+    <section id="toolpath" class="scene toolpath-scene reveal-scene" aria-labelledby="toolpath-title">
+      <div class="toolpath-heading">
+        <p class="kicker">LIVE INPUT / G-CODE DREAM FIELD</p>
+        <h2 id="toolpath-title">Draw a path for the machine to remember.</h2>
+        <p>
+          Press and drag inside the field. Your movement becomes a temporary
+          toolpath, translated into coordinates that disappear when this page closes.
+        </p>
+      </div>
+
+      <div class="canvas-module">
+        <div class="canvas-toolbar">
+          <p><span>MODE</span> <strong id="mode-readout">TRACE</strong></p>
+          <p><span>POSITION</span> <strong id="coordinate-readout">X000 Y000</strong></p>
+          <p><span>SEGMENTS</span> <strong id="segment-readout">000</strong></p>
+        </div>
+
+        <canvas
+          id="toolpath-canvas"
+          width="1200"
+          height="720"
+          tabindex="0"
+          aria-label="Interactive drawing field. Drag a pointer to create a toolpath, or use the Generate Path button."
+        >
+          Your browser does not support the interactive drawing field.
+        </canvas>
+
+        <div class="canvas-controls" aria-label="Toolpath controls">
+          <button id="generate-path" type="button">Generate path</button>
+          <button id="switch-mode" type="button">Switch mode</button>
+          <button id="clear-path" type="button">Clear field</button>
+        </div>
+
+        <p id="gcode-line" class="gcode-line" aria-live="polite">
+          G00 X000.00 Y000.00 ; AWAITING INPUT
+        </p>
+      </div>
+    </section>
+
+    <section id="fragments" class="scene fragment-scene reveal-scene" aria-labelledby="fragment-title">
+      <div class="fragment-copy">
+        <p class="kicker">INTERFACE DEBRIS / USER ASSEMBLY</p>
+        <h2 id="fragment-title">The interface broke before you arrived.</h2>
+        <p>
+          Drag the fragments into a new order. There is no correct reconstruction,
+          only the version the current observer leaves behind.
+        </p>
+        <p class="keyboard-note">Keyboard: focus a fragment and use the arrow keys.</p>
+      </div>
+
+      <div id="fragment-field" class="fragment-field" aria-label="Draggable interface fragments">
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="core-disc" aria-hidden="true"><span></span></div>
+
+        <button class="fragment fragment-a" type="button" data-fragment>
+          FRAME / 0126
+        </button>
+        <button class="fragment fragment-b" type="button" data-fragment>
+          MEMORY: UNSTABLE
+        </button>
+        <button class="fragment fragment-c" type="button" data-fragment>
+          X&nbsp;&nbsp;X&nbsp;&nbsp;X
+        </button>
+        <button class="fragment fragment-d" type="button" data-fragment>
+          TRACE_404
+        </button>
+        <button class="fragment fragment-e" type="button" data-fragment>
+          OBSERVER PRESENT
+        </button>
+      </div>
+
+      <div class="transmission-panel">
+        <p class="panel-label">TRANSMISSION / CLICK TO DECODE</p>
+        <button id="message-button" class="message-button" type="button">
+          <span id="message-output">A screen is never only a window.</span>
+          <small>Decode next fragment</small>
+        </button>
+      </div>
+    </section>
+
+    <section id="archive" class="scene archive-scene reveal-scene" aria-labelledby="archive-title">
+      <p class="kicker">SESSION ARCHIVE / LOCAL ONLY</p>
+      <h2 id="archive-title">This page remembers you until you leave.</h2>
+
+      <div class="archive-grid">
+        <article>
+          <strong id="pointer-count">0000</strong>
+          <span>pointer signals</span>
+        </article>
+        <article>
+          <strong id="path-count">000</strong>
+          <span>toolpath segments</span>
+        </article>
+        <article>
+          <strong id="fragment-count">00</strong>
+          <span>fragments moved</span>
+        </article>
+      </div>
+
+      <p class="archive-statement">
+        Nothing is uploaded. Nothing is saved. The artwork exists through your
+        temporary interaction with it, then returns to its unfinished state.
+      </p>
+
+      <button id="reset-session" class="reset-button" type="button">
+        Erase this version of the world
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <p>NEW WORLD, NEXUS</p>
+    <p>Net artwork by Richard Allen Rojas-Rangel / ART 109 / 2026</p>
+    <a href="#portal">Return to transmission</a>
+    <p class="ai-credit">
+      AI-use disclosure: OpenAI Codex assisted with code development and testing;
+      the concept, visual direction, revisions, and final decisions were directed by Richard.
+    </p>
+  </footer>
+</body>
+</html>
